@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Volkhov:wght@400;700&display=swap');
+
+:root {
+    --orange: #DF6951;
+    --dark-orange: #cf4b31;
+    --yellow: #F1A501;
+    --dark-yellow: #b17b08;
+    --blue: #181E4B;
+    --gray: #5E6282;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+}
+
+.img-full {
+    width: 100%;
+}
+
+.left-hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.left-hero-text h4 {
+    font-family: 'poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+.left-hero-text h1 {
+    font-family: "Volkhov", Serif;
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 89px;
+    color: var(--blue);
+    letter-spacing: -0.04em;
+}
+
+.left-hero-text p {
+    color: var(--gray);
+    margin: 30px 0;
+}
+
+.p {
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.btn-primary {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-yellow);
+    border-color: var(--dark-yellow);
+}
+
+.btn-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-play p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.btn-rounded {
+    width: 52px;
+    height: 52px;
+    background-color: var(--orange);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 21px;
+}
+
+.button-hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.play-demo {
+    margin-left: 44px;
+}
+
+#hero {
+    height: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -999;
+}
+
+
+
+@media (max-width: 991px) {
+    #hero {
+        flex-direction: column;
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .row-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .left-hero-text {
+        padding: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-decor {
+        width: 460px;
+    }
+
+    .left-hero-text h1 {
+        font-size: 16px;
+    }
+
+    .left-hero-text h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .button-hero{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .play-demo {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}

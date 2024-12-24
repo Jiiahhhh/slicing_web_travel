@@ -13,15 +13,15 @@ environments:
   development:
     dataSource:
       dbCreate: create-drop
-      url: jdbc:mysql://localhost:3306/devDb
+      url: jdbc:mysql://localhost:3306/gerak
   test:
     dataSource:
       dbCreate: update
-      url: jdbc:mysql://localhost:3306/testDb
+      url: jdbc:mysql://localhost:3306/gerak
   production:
     dataSource:
       dbCreate: none
-      url: jdbc:mysql://localhost:3306/prodDb
+      url: jdbc:mysql://localhost:3306/gerak
       properties:
         jmxEnabled: true
         initialSize: 5
@@ -92,3 +92,5 @@ grails:
   codegen:
     defaultPackage: com.ilal
   profile: web
+server:
+  port: 8081
