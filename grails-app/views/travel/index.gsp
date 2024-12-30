@@ -284,9 +284,151 @@
         </div>
     </div>
 </section>
-<section id="bookTrip">
+<section id="steps-section">
     <div class="container">
         <div class="row">
+            <div class="col-lg-6">
+                <p class="subtitle-section">Easy and Fast</p>
+                <h3 class="title-section">Book Your Next Trip In 3 Easy Steps</h3>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="icon-step">
+                            <img src="${createLink(controller: 'image', action: 'showImage',
+                                    params: [fileName: 'trip-1.svg'])}" alt="destination">
+                        </div>
+                        <div class="text-step">
+                            <h3>Choose Destination</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Urna, tortor tempus. </p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="icon-step">
+                            <img src="${createLink(controller: 'image', action: 'showImage',
+                                    params: [fileName: 'trip-2.svg'])}" alt="payment">
+                        </div>
+                        <div class="text-step">
+                            <h3>Make Payment</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Urna, tortor tempus. </p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="icon-step">
+                            <img src="${createLink(controller: 'image', action: 'showImage',
+                                    params: [fileName: 'trip-3.svg'])}" alt="airport">
+                        </div>
+                        <div class="text-step">
+                            <h3>Reach Airport on Selected Date</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Urna, tortor tempus. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 card-notification">
+                <div class="card-destination">
+                    <div class="card-image-destination">
+                        <img src="${createLink(controller: 'image', action: 'showImage',
+                                params: [fileName: 'trip-grace.png'])}" alt="account">
+                    </div>
+                    <div class="card-body">
+                        <h3>Trip To Greece</h3>
+                        <p>14-29 June | by Robbin Jo</p>
+                        <div class="card-category">
+                            <div class="icon-category">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.8254 0.150827C14.4413 0.0428744 5.04614 -0.855475 1.74663 3.42567C0.285317 5.32223 0.263366 7.9221 1.67341 11.1525C1.31572 11.8655 1.00259 12.6166 0.747406 13.4091C0.669822 13.6499 0.810156 13.9052 1.06062 13.9795C1.10731 13.9934 1.1546 14 1.20129 14C1.40378 14 1.59178 13.8744 1.65453 13.6787C4.16934 5.87028 12.3419 2.09267 14.8481 1.13835C15.092 1.0454 15.418 0.317405 14.8254 0.150827Z" fill="#84829A"/>
+                                    <path d="M3.1821 12.1297C4.54237 12.6777 5.90244 12.9586 7.16722 12.9586C8.30405 12.9586 9.36424 12.7341 10.2778 12.2789C12.1165 11.3629 13.24 9.61072 13.5269 7.21123C13.8193 4.76581 14.1832 3.23407 14.4868 2.29703C11.7844 3.49419 5.99016 6.59731 3.1821 12.1297Z" fill="#84829A"/>
+                                </svg>
+                            </div>
+                            <div class="icon-category">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.8514 3.56123e-08C14.7706 -2.92608e-05 14.6908 0.0180173 14.6185 0.0527336L10.6733 1.94771L6.21219 0.0432416C6.2049 0.0402533 6.19657 0.039726 6.18876 0.0367378C6.16869 0.0295308 6.14816 0.0235251 6.12733 0.0187497C6.10661 0.0133885 6.08557 0.00919911 6.06433 0.00624017C6.02206 0.00290038 5.97956 0.00290038 5.93731 0.00624017C5.91608 0.00919911 5.89503 0.0133885 5.87432 0.0187497C5.85349 0.0235251 5.83296 0.0295308 5.81289 0.0367378C5.80508 0.039726 5.79675 0.040224 5.78946 0.0432416L1.10396 2.04322C0.915872 2.12343 0.794678 2.30255 0.794708 2.50019V13.5C0.7948 13.6692 0.883903 13.8268 1.03158 13.919C1.17928 14.0114 1.36557 14.0257 1.52666 13.957L6.00079 12.047L10.4749 13.957C10.4827 13.96 10.4911 13.957 10.4989 13.9615C10.6249 14.0157 10.7696 14.0126 10.893 13.953C10.9013 13.9496 10.9106 13.953 10.919 13.9475L15.0839 11.9476C15.2603 11.8629 15.3718 11.6896 15.3718 11.5V0.500237C15.3719 0.224088 15.1389 0.000117221 14.8514 3.56123e-08ZM5.4802 11.1751L1.83592 12.7305V2.8252L5.4802 1.26971V11.1751ZM10.1657 12.7305L6.52141 11.1751V1.26971L10.1657 2.82517V12.7305ZM14.3306 11.1911L11.2069 12.691V2.80918L14.3306 1.3092V11.1911Z" fill="#84829A"/>
+                                </svg>
+                            </div>
+                            <div class="icon-category">
+                                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.708 0.242513L5.13001 6.58335C5.0546 6.54139 4.9753 6.50624 4.89313 6.47835L0.550305 5.06668C0.418972 5.03507 0.302401 4.96222 0.219108 4.8597C0.135815 4.75719 0.0905762 4.63088 0.0905762 4.50085C0.0905762 4.37081 0.135815 4.24451 0.219108 4.14199C0.302401 4.03947 0.418972 3.96662 0.550305 3.93501L11.3254 0.25418C11.3958 0.231211 11.4697 0.21939 11.544 0.21918C11.5997 0.218319 11.6551 0.226201 11.708 0.242513Z" fill="#84829A"/>
+                                    <path d="M12.1272 1.02418L8.29453 11.3842C8.25227 11.5049 8.17002 11.6091 8.06035 11.6807C7.95067 11.7523 7.8196 11.7875 7.68715 11.7808C7.55317 11.7867 7.42093 11.7499 7.31105 11.676C7.20118 11.6021 7.11985 11.4954 7.07976 11.3725L5.63417 7.20168C5.60513 7.12276 5.56853 7.0466 5.52484 6.97418L12.1393 0.656677C12.1766 0.777232 12.1724 0.906138 12.1272 1.02418Z" fill="#84829A"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="people-info">
+                                <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"></path>
+                                </svg>
+                                <span>24 people going</span>
+                            </div>
+                            <button class="favorite-btn">
+                                <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status-notification">
+                    <img src="${createLink(controller: 'image', action: 'showImage',
+                            params: [fileName: 'trip-ongoing.png'])}" alt="ongoing trips">
+                    <div class="profile-ongoing">
+                        <p class="ongoing">Ongoing</p>
+                        <h4>Trip to Rome</h4>
+                        <p><span class="percentage">40%</span> completed</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width:40%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="subtitle-section">TESTIMONIALS</p>
+                <h3 class="title-section">What People Say About Us.</h3>
+            </div>
+            <div class="col-lg-6">
+                <div class="testimonial-card">
+                    <div class="profile">
+                        <img src="${createLink(controller: 'image', action: 'showImage',
+                                params: [fileName: 'ilal.png'])}" alt="ilal">
+                    </div>
+                    <div class="content">
+                        <p class="quote">“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
+                        <p class="name">Muhammad Ijlal Nurhadi</p>
+                        <p class="location">Makassar, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center logo-row">
+            <div class="col-auto">
+                <img src="${createLink(controller: 'image', action: 'showImage',
+                        params: [fileName: 'logo-axon.png'])}" alt="axon">
+            </div>
+            <div class="col-auto">
+                <img src="${createLink(controller: 'image', action: 'showImage',
+                        params: [fileName: 'logo-jetstar.png'])}" alt="jetstar">
+            </div>
+            <div class="col-auto">
+                <img src="${createLink(controller: 'image', action: 'showImage',
+                        params: [fileName: 'logo-expedia.png'])}" alt="expedia">
+            </div><div class="col-auto">
+            <img src="${createLink(controller: 'image', action: 'showImage',
+                    params: [fileName: 'logo-qantas.png'])}" alt="qantas">
+        </div>
+            <div class="col-auto">
+                <img src="${createLink(controller: 'image', action: 'showImage',
+                        params: [fileName: 'logo-alitalia.png'])}" alt="alitalia">
+            </div>
+
 
         </div>
     </div>

@@ -282,13 +282,12 @@ body {
 .card {
     background-color: #FFFFFF;
     border-radius: 24px;
-    box-shadow:
-            0px 1.85px 3.15px 0px #00000001,
-            0px 8.15px 6.52px 0px #00000002,
-            0px 20px 13px 0px #00000003,
-            0px 38.52px 25.48px 0px #00000003,
-            0px 64.81px 46.85px 0px #00000004,
-            0px 100px 80px 0px #00000005;
+    box-shadow: 0px 1.85px 3.15px 0px #00000001,
+    0px 8.15px 6.52px 0px #00000002,
+    0px 20px 13px 0px #00000003,
+    0px 38.52px 25.48px 0px #00000003,
+    0px 64.81px 46.85px 0px #00000004,
+    0px 100px 80px 0px #00000005;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -340,7 +339,7 @@ body {
     font-size: 14px;
 }
 
-.card-description{
+.card-description {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -369,6 +368,337 @@ body {
     z-index: -1;
     opacity: 1;
 }
+
+#steps-section {
+    background: #E1E6E9;
+    padding: 50px 20px;
+}
+
+#steps-section h3 {
+    text-align: left;
+}
+
+#steps-section p {
+    text-align: left;
+}
+
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-step {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+}
+
+.icon-step img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.text-step h3 {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gray);
+}
+
+.text-step p {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gray);
+}
+
+.card-notification {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-destination {
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1),
+    0 0 1px rgba(59, 130, 246, 0.4); /* Glow biru */
+    overflow: hidden;
+    width: 386px;
+    height: 400px;
+    position: relative;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-destination:hover {
+    transform: translateY(-5px); /* Memberikan efek hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1),
+    0 0 60px rgba(59, 130, 246, 0.6); /* Glow lebih intens saat hover */
+}
+
+.card-image-destination {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+}
+
+.card-image img {
+    width: 100%;
+    align-items: center;
+    border-radius: 24px 24px 0 0; /* Melengkungkan sudut atas */
+}
+
+.card-body {
+    padding-left: 24px;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1F2937; /* Warna teks gelap */
+}
+
+.card-body p {
+    font-size: 14px;
+    color: var(--gray); /* Warna teks abu-abu */
+    margin-bottom: 20px;
+}
+
+.card-category {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icon-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #F4F6F9; /* Latar belakang ikon */
+    border-radius: 50%;
+}
+
+.card-footer {
+    position: relative; /* Penting untuk menempatkan ikon favorit di sudut kanan bawah */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: white;
+    border-top: 0;
+    border-radius: 0 0 24px 24px;
+}
+
+.people-info {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak antara ikon dan teks */
+}
+
+.people-info svg {
+    width: 20px;
+    height: 20px;
+    color: #6B7280;
+}
+
+.people-info span {
+    font-size: 14px;
+    color: #84829A;
+}
+
+.favorite-btn {
+    margin-top: 12px;
+    position: absolute;
+    bottom: 16px; /* Jarak dari bawah */
+    right: 16px; /* Jarak dari kanan */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #3B82F6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.favorite-btn:hover {
+    background-color: #E0F2FE;
+    color: #1D4ED8;
+}
+
+.favorite-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Status Notification */
+.status-notification {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    position: absolute;
+    top: 53%; /* Sesuaikan posisi */
+    left: 60%; /* Sesuaikan posisi */
+    transform: translate(-10%, -15%);
+    width: 274px;
+    height: 129px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.status-notification img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.status-notification p {
+    font-size: 14px;
+    color: black;
+    margin: 0;
+}
+
+.status-notification h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #080809;
+    margin: 0;
+}
+
+.ongoing {
+    color: #84829A !important;
+}
+
+.percentage {
+    color: #84829A;
+}
+
+.progress-bar {
+    background: #E5E7EB; /* Latar belakang progress bar */
+    border-radius: 8px;
+    height: 8px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+}
+
+.progress {
+    background: #8A79DF; /* Warna progress */
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.3s ease; /* Animasi smooth */
+}
+
+#testimonial {
+    padding: 100px 20px;
+}
+
+#testimonial h3 {
+    text-align: left;
+}
+
+#testimonial p {
+    text-align: left;
+}
+
+.testimonial-card {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 24px 36px 24px 36px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+.profile {
+    position: absolute;
+    top: -20px; /* Overlapping effect */
+    left: 24px;
+    transform: translate(-90%, -10%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #FFFFFF; /* White border */
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Styling */
+.content .quote {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4A5568; /* Gray text color */
+    margin-bottom: 16px;
+}
+
+.content .name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2D3748; /* Darker gray for the name */
+    margin-bottom: 4px;
+}
+
+.content .location {
+    font-size: 14px;
+    color: #718096; /* Light gray for location */
+}
+
+/* General Styling */
+.logo-row {
+    margin: 80px 0 0 0; /* Optional: Vertical spacing for the row */
+}
+
+.logo-row .logo {
+    max-height: 50px; /* Uniform height for logos */
+    object-fit: contain; /* Preserve aspect ratio */
+    padding: 0 20px; /* Horizontal padding for consistent spacing */
+}
+
+.logo-row .col-auto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media (max-width: 1199px) {
     .wrapper-nav {
