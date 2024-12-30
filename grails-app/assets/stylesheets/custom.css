@@ -618,7 +618,7 @@ body {
 }
 
 #testimonial {
-    padding: 100px 20px;
+    padding: 100px;
 }
 
 #testimonial h3 {
@@ -684,7 +684,7 @@ body {
 
 /* General Styling */
 .logo-row {
-    margin: 80px 0 0 0; /* Optional: Vertical spacing for the row */
+    margin: 80px 0 0 0;
 }
 
 .logo-row .logo {
@@ -699,6 +699,213 @@ body {
     align-items: center;
 }
 
+.logo-item {
+    margin: 20px
+}
+
+
+#subscribe {
+    padding-bottom: 80px;
+}
+
+.card-subscribe {
+    position: relative;
+    background-color: #F9F6FF;
+    padding: 60px 20px;
+    border-radius: 129px 20px 20px 20px;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card-subscribe h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 54px;
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.input-group input {
+    width: 421px;
+    padding: 12px 20px;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #6246E5;
+    box-shadow: 0px 0px 4px rgba(98, 70, 229, 0.5);
+}
+
+.input-group button {
+    background-image: linear-gradient(to bottom, #FF946D, #FF7D68);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #E05555;
+}
+
+.decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.circle-decor1 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    bottom: 200px;
+    left: -20px;
+    z-index: 0;
+}
+
+.circle-decor2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    bottom: 200px;
+    left: 650px;
+    z-index: 0;
+}
+
+.icon-decor {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-image: linear-gradient(45deg, #747DEF, #5E3BE1);
+    transform: translate(-100%, -100%);
+    border-radius: 50%;
+    padding: 8px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(98, 70, 229, 0.2);
+}
+
+.subscribe-decor {
+    position: absolute;
+    top: 230px;
+    right: 100px;
+    transform: translate(50%);
+    width: 153px;
+    height: 166px;
+    z-index: -1;
+    opacity: 1;
+}
+
+footer {
+    padding: 100px 0 0 0;
+}
+
+footer h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 66px;
+    color: var(--blue);
+}
+
+footer p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: var(--gray);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Jarak antar kolom */
+}
+
+.footer-column h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 27px;
+    margin-bottom: 10px;
+    color: #080809;
+    padding: 20px 0px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 23px;
+    font-size: 18px;
+    color: var(--gray); /* Warna teks abu-abu */
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #000000; /* Warna teks saat hover */
+}
+
+.discover {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.footer-decor {
+    position: absolute;
+    /*right: 100px;*/
+    bottom: 230px;
+    /*transform: translate(50%);*/
+    width: 153px;
+    height: 166px;
+    z-index: -1;
+    opacity: 1;
+}
 
 @media (max-width: 1199px) {
     .wrapper-nav {
