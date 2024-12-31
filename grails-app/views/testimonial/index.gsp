@@ -3,7 +3,6 @@
 <head>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'custom.css')}">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Jadoo</title>
 </head>
 
@@ -18,6 +17,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
     </svg>
 </div>
+
 <nav class="main-nav">
     <div class="container">
         <div class="row">
@@ -30,21 +30,23 @@
 
             <div class="col-lg-9">
                 <ul class="wrapper-nav">
-                    <li><a href="#">Destinations</a></li>
-                    <li><a href="#">Hotels</a></li>
-                    <li><a href="#">Flights</a></li>
-                    <li><a href="#">Bookings</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#" class="btn btn-outline-secondary">Signup</a></li>
+                    <li><a href="#"><g:message code="nav.destination"/></a></li>
+                    <li><a href="#"><g:message code="nav.hotels"/></a></li>
+                    <li><a href="#"><g:message code="nav.flights"/></a></li>
+                    <li><a href="#"><g:message code="nav.bookings"/></a></li>
+                    <li><a href="#"><g:message code="nav.login"/></a></li>
+                    <li><a href="#" class="btn btn-outline-secondary"><g:message code="nav.signup"/></a></li>
                     <li class="dropdown">
-                        <button class="wrapper-dropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"
-                                role="button">EN</button>
+                        <button class="wrapper-dropdown" data-bs-toggle="dropdown" aria-expanded="false"
+                                role="button">
+                            ${session.lang ?: 'EN'}
+                        </button>
                         <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.849335 0.5L5.42463 5L9.99993 0.5" stroke="#212832"/>
                         </svg>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">EN</a></li>
-                            <li><a class="dropdown-item" href="#">ID</a></li>
+                            <li><a class="dropdown-item" href="${createLink(controller: 'language', action: 'switchLanguage', params: [lang: 'en'])}">EN</a></li>
+                            <li><a class="dropdown-item" href="${createLink(controller: 'language', action: 'switchLanguage', params: [lang: 'ind'])}">ID</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -60,14 +62,14 @@
         <div class="row row-reverse">
             <div class="col-lg-6">
                 <div class="left-hero-text">
-                    <h4>Best Destinations around the world</h4>
+                    <h4><g:message code="hero.header"/></h4>
 
-                    <h1>Travel, <span class="decor-underline">enjoy</span> and live a new and full life</h1>
+                    <h1><g:message code="hero.title1"/> <span class="decor-underline"><g:message code="hero.title2"/></span><g:message code="hero.title3"/></h1>
 
-                    <p>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
+                    <p><g:message code="hero.subtitle"/></p>
 
                     <div class="button-hero">
-                        <a href="#" class="btn btn-lg btn-primary">Find out more</a>
+                        <a href="#" class="btn btn-lg btn-primary"><g:message code="hero.btnFindOut"/></a>
 
                         <div class="play-demo">
                             <div class="btn-play">
@@ -76,7 +78,7 @@
                                             params: [fileName: 'icon-play.svg'])}" alt="play">
                                 </div>
 
-                                <p>Play Demo</p>
+                                <p><g:message code="hero.playDemo"/></p>
                             </div>
                         </div>
                     </div>
@@ -95,8 +97,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4 class="subtitle-section ">CATEGORY</h4>
-                <h2 class="title-section">We Offer Best Services</h2>
+                <h4 class="subtitle-section "><g:message code="category.header"/></h4>
+
+                <h2 class="title-section"><g:message code="category.title"/></h2>
                 <svg class="service-decor" width="153" height="166" viewBox="0 0 153 166" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.5586 12.6104V14.4795H0.837891V12.6104H11.5586ZM7.19727 8.04492V19.4316H5.20996V8.04492H7.19727Z"
@@ -155,10 +158,10 @@
                                 params: [fileName: 'service-1.svg'])}" alt="icon service">
                     </div>
                     <article>
-                        <h3>Calculated Weather</h3>
+                        <h3><g:message code="category.weather.title"/></h3>
 
                         <p>
-                            Built Wicket longer admire do barton vanity itself do in it.
+                            <g:message code="category.weather.subtitle"/>
                         </p>
                     </article>
                 </div>
@@ -171,10 +174,10 @@
                                 params: [fileName: 'service-4.svg'])}" alt="icon service">
                     </div>
                     <article>
-                        <h3>Best Flights</h3>
+                        <h3><g:message code="category.flights.title"/></h3>
 
                         <p>
-                            Engrossed listening. Park gate sell they west hard for the.</p>
+                            <g:message code="category.flights.subtitle"/></p>
                     </article>
                 </div>
             </div>
@@ -186,10 +189,10 @@
                                 params: [fileName: 'service-3.svg'])}" alt="icon service">
                     </div>
                     <article>
-                        <h3>Local Events</h3>
+                        <h3><g:message code="category.events.title"/></h3>
 
                         <p>
-                            Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
+                            <g:message code="category.events.subtitle"/></p>
                     </article>
                 </div>
             </div>
@@ -201,10 +204,10 @@
                                 params: [fileName: 'service-2.svg'])}" alt="icon service">
                     </div>
                     <article>
-                        <h3>Customization</h3>
+                        <h3><g:message code="category.customization.title"/></h3>
 
                         <p>
-                            We deliver outsourced aviation services for military customers
+                            <g:message code="category.customization.subtitle"/>
                         </p>
                     </article>
                 </div>
@@ -216,9 +219,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="subtitle-section">Top Selling</p>
+                <p class="subtitle-section"><g:message code="selling.header"/></p>
 
-                <h3 class="title-section">Top Destinations</h3>
+                <h3 class="title-section"><g:message code="selling.title"/></h3>
             </div>
         </div>
 
@@ -232,7 +235,7 @@
 
                     <div class="card-body">
                         <div class="card-title">
-                            <h3>Roma, Italy</h3>
+                            <h3><g:message code="selling.roma"/></h3>
                             <span class="card-price">$5.42k</span>
                         </div>
 
@@ -244,7 +247,7 @@
                                           fill="#080809"/>
                                 </svg>
                             </span>
-                            <span>10 Days Trip</span>
+                            <span>10 <g:message code="selling.daystrip"/></span>
                         </div>
                     </div>
                 </div>
@@ -259,7 +262,7 @@
 
                     <div class="card-body">
                         <div class="card-title">
-                            <h3>London, UK</h3>
+                            <h3><g:message code="selling.london"/></h3>
                             <span class="card-price">$4.2k</span>
                         </div>
 
@@ -271,7 +274,7 @@
                                           fill="#080809"/>
                                 </svg>
                             </span>
-                            <span>12 Days Trip</span>
+                            <span>12 <g:message code="selling.daystrip"/></span>
                         </div>
                     </div>
                 </div>
@@ -288,7 +291,7 @@
 
                     <div class="card-body">
                         <div class="card-title">
-                            <h3>Full Europe</h3>
+                            <h3><g:message code="selling.europe"/></h3>
                             <span class="card-price">$15k</span>
                         </div>
 
@@ -300,7 +303,7 @@
                                           fill="#080809"/>
                                 </svg>
                             </span>
-                            <span>28 Days Trip</span>
+                            <span>28 <g:message code="selling.daystrip"/></span>
                         </div>
                     </div>
                 </div>
@@ -312,9 +315,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <p class="subtitle-section">Easy and Fast</p>
+                <p class="subtitle-section"><g:message code="steps.header"/></p>
 
-                <h3 class="title-section">Book Your Next Trip In 3 Easy Steps</h3>
+                <h3 class="title-section"><g:message code="steps.title"/></h3>
 
                 <div class="steps-list">
                     <div class="step-item">
@@ -324,7 +327,7 @@
                         </div>
 
                         <div class="text-step">
-                            <h3>Choose Destination</h3>
+                            <h3><g:message code="steps.option1"/></h3>
 
                             <p>Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Urna, tortor tempus.</p>
@@ -338,7 +341,7 @@
                         </div>
 
                         <div class="text-step">
-                            <h3>Make Payment</h3>
+                            <h3><g:message code="steps.option2"/></h3>
 
                             <p>Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Urna, tortor tempus.</p>
@@ -352,7 +355,7 @@
                         </div>
 
                         <div class="text-step">
-                            <h3>Reach Airport on Selected Date</h3>
+                            <h3><g:message code="steps.option3"/></h3>
 
                             <p>Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Urna, tortor tempus.</p>
@@ -369,9 +372,9 @@
                     </div>
 
                     <div class="card-body">
-                        <h3>Trip To Greece</h3>
+                        <h3><g:message code="steps.greece"/></h3>
 
-                        <p>14-29 June | by Robbin Jo</p>
+                        <p><g:message code="steps.calendar"/></p>
 
                         <div class="card-category">
                             <div class="icon-category">
@@ -410,7 +413,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                           d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"></path>
                                 </svg>
-                                <span>24 people going</span>
+                                <span>24 <g:message code="steps.people"/></span>
                             </div>
                             <button class="favorite-btn">
                                 <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor"
@@ -428,10 +431,10 @@
                             params: [fileName: 'trip-ongoing.png'])}" alt="ongoing trips">
 
                     <div class="profile-ongoing">
-                        <p class="ongoing">Ongoing</p>
-                        <h4>Trip to Rome</h4>
+                        <p class="ongoing"><g:message code="steps.ongoing"/></p>
+                        <h4><g:message code="steps.torome"/></h4>
 
-                        <p><span class="percentage">40%</span> completed</p>
+                        <p><span class="percentage">40%</span> <g:message code="steps.completed"/></p>
 
                         <div class="progress-bar">
                             <div class="progress" style="width:40%">
@@ -447,27 +450,54 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <p class="subtitle-section">TESTIMONIALS</p>
+                <p class="subtitle-section"><g:message code="testimonials.header"/></p>
 
-                <h3 class="title-section">What People Say About Us.</h3>
+                <h3 class="title-section"><g:message code="testimonials.title"/></h3>
             </div>
 
             <div class="col-lg-6">
-                <div class="testimonial-card">
-                    <div class="profile">
-                        <img src="${createLink(controller: 'image', action: 'showImage',
-                                params: [fileName: 'ilal.png'])}" alt="ilal">
+                <div class="testimonial-slider">
+                    <div class="slides-container">
+                        <g:each in="${testimonials}" var="testimonial" status="i">
+                            <div class="slide ${i == 0 ? 'active' : ''}">
+                                <div class="testimonial-card">
+                                    <div class="profile">
+                                        <img src="${createLink(controller: 'image', action: 'showImage', params: [fileName: testimonial.profileImagePath])}"
+                                             alt="${testimonial.fullName}">
+                                    </div>
+
+                                    <div class="content">
+                                        <p class="quote">${testimonial.testimonial}</p>
+
+                                        <p class="name">${testimonial.fullName}</p>
+
+                                        <p class="location">${testimonial.location}, ${testimonial.country}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </g:each>
                     </div>
+                    <!-- Tombol navigasi -->
+                    <div class="controls">
+                        <button class="control up">
+                            <svg width="15" height="10" viewBox="0 0 15 10" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.86255 1L7.93131 8L14.0001 1" stroke="#3E2E4D" stroke-width="2"
+                                      stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <button class="control down">
+                            <svg width="15" height="10" viewBox="0 0 15 10" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.86255 1L7.93131 8L14.0001 1" stroke="#3E2E4D" stroke-width="2"
+                                      stroke-linecap="round"/>
+                            </svg>
 
-                    <div class="content">
-                        <p class="quote">“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-
-                        <p class="name">Muhammad Ijlal Nurhadi</p>
-
-                        <p class="location">Makassar, Indonesia</p>
+                        </button>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="row justify-content-center align-items-center logo-row">
@@ -503,14 +533,15 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="card-subscribe">
-                    <h2>Subscribe to get information, latest news and other interesting offers about Jadoo</h2>
+                    <h2><g:message code="subscribe.title"/></h2>
 
                     <form class="subscribe-form">
                         <div class="input-group">
-                            <input type="email" placeholder="Your email" required/>
-                            <button type="submit">Subscribe</button>
+                            <input type="email" placeholder="<g:message code='subscribe.email'/>" required/>
+                            <button type="submit"><g:message code="subscribe.btnSubscribe"/></button>
                         </div>
                     </form>
+
                     <div class="circle-decor1">
                         <svg width="480" height="361" viewBox="0 0 480 361" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -545,14 +576,19 @@
                         </svg>
 
                     </div>
+
                     <div class="circle-decor2">
-                        <svg width="264" height="352" viewBox="0 0 264 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="264" height="352" viewBox="0 0 264 352" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.1">
-                                <mask id="mask0_206_1502" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="264" height="352">
-                                    <path d="M0.5 0.5H240C252.979 0.5 263.5 11.0213 263.5 24V351.021H50C22.6619 351.021 0.5 328.86 0.5 301.521V0.5Z" fill="url(#paint0_linear_206_1502)" stroke="#6246E5"/>
+                                <mask id="mask0_206_1502" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                      width="264" height="352">
+                                    <path d="M0.5 0.5H240C252.979 0.5 263.5 11.0213 263.5 24V351.021H50C22.6619 351.021 0.5 328.86 0.5 301.521V0.5Z"
+                                          fill="url(#paint0_linear_206_1502)" stroke="#6246E5"/>
                                 </mask>
                                 <g mask="url(#mask0_206_1502)">
-                                    <path d="M330.818 178.32C330.818 229.022 289.717 270.124 239.015 270.124C188.313 270.124 147.212 229.022 147.212 178.32C147.212 127.618 188.313 86.5166 239.015 86.5166C289.717 86.5166 330.818 127.618 330.818 178.32Z" stroke="#6246E5"/>
+                                    <path d="M330.818 178.32C330.818 229.022 289.717 270.124 239.015 270.124C188.313 270.124 147.212 229.022 147.212 178.32C147.212 127.618 188.313 86.5166 239.015 86.5166C289.717 86.5166 330.818 127.618 330.818 178.32Z"
+                                          stroke="#6246E5"/>
                                     <circle cx="231.728" cy="168.604" r="102.734" stroke="#6246E5"/>
                                     <circle cx="225.655" cy="160.709" r="112.45" stroke="#6246E5"/>
                                     <circle cx="219.583" cy="149.171" r="120.952" stroke="#6246E5"/>
@@ -561,7 +597,8 @@
                                 </g>
                             </g>
                             <defs>
-                                <linearGradient id="paint0_linear_206_1502" x1="187.239" y1="9.86233" x2="5.23235" y2="354.286" gradientUnits="userSpaceOnUse">
+                                <linearGradient id="paint0_linear_206_1502" x1="187.239" y1="9.86233" x2="5.23235"
+                                                y2="354.286" gradientUnits="userSpaceOnUse">
                                     <stop stop-color="#747DEF"/>
                                     <stop offset="1" stop-color="#5E3BE1"/>
                                 </linearGradient>
@@ -570,43 +607,68 @@
 
                     </div>
                 </div>
+
                 <div class="icon-decor">
                     <svg width="46" height="44" viewBox="0 0 46 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M37.6105 12.9904C38.3018 14.1878 38.2092 15.6136 37.3677 16.711L18.8939 40.8182C18.1321 41.8123 16.8776 42.3191 15.5948 42.0729C14.3387 41.8313 13.3427 40.9156 12.997 39.6841L10.2635 29.9555L9.97886 28.9435L9.24487 28.191L2.18643 20.9595C1.29269 20.0444 0.9977 18.724 1.41656 17.5154C1.83111 16.3206 2.87082 15.4536 4.15272 15.2856L34.267 11.3404C35.6381 11.1604 36.9192 11.793 37.6105 12.9904Z" fill="white"/>
-                        <path d="M10.2636 29.9555L12.9971 39.6841C13.3427 40.9157 14.3387 41.8313 15.5949 42.0729C16.8777 42.3192 18.1321 41.8124 18.894 40.8182L37.3678 16.7111C38.2092 15.6137 38.3019 14.1879 37.6106 12.9905L9.97895 28.9436L10.2636 29.9555Z" fill="white"/>
-                        <path d="M21.2232 22.4515C21.5043 22.9385 21.3379 23.5616 20.8503 23.8431L10.2636 29.9553L9.97893 28.9434L9.24493 28.1909L19.8316 22.0787C20.3192 21.7973 20.9421 21.9646 21.2232 22.4515Z" fill="url(#paint0_linear_0_146)"/>
-                        <path d="M10.2637 29.9554L20.8504 23.8432C21.3379 23.5617 21.5044 22.9387 21.2232 22.4517L9.97899 28.9435L10.2637 29.9554Z" fill="url(#paint1_linear_0_146)"/>
+                        <path d="M37.6105 12.9904C38.3018 14.1878 38.2092 15.6136 37.3677 16.711L18.8939 40.8182C18.1321 41.8123 16.8776 42.3191 15.5948 42.0729C14.3387 41.8313 13.3427 40.9156 12.997 39.6841L10.2635 29.9555L9.97886 28.9435L9.24487 28.191L2.18643 20.9595C1.29269 20.0444 0.9977 18.724 1.41656 17.5154C1.83111 16.3206 2.87082 15.4536 4.15272 15.2856L34.267 11.3404C35.6381 11.1604 36.9192 11.793 37.6105 12.9904Z"
+                              fill="white"/>
+                        <path d="M10.2636 29.9555L12.9971 39.6841C13.3427 40.9157 14.3387 41.8313 15.5949 42.0729C16.8777 42.3192 18.1321 41.8124 18.894 40.8182L37.3678 16.7111C38.2092 15.6137 38.3019 14.1879 37.6106 12.9905L9.97895 28.9436L10.2636 29.9555Z"
+                              fill="white"/>
+                        <path d="M21.2232 22.4515C21.5043 22.9385 21.3379 23.5616 20.8503 23.8431L10.2636 29.9553L9.97893 28.9434L9.24493 28.1909L19.8316 22.0787C20.3192 21.7973 20.9421 21.9646 21.2232 22.4515Z"
+                              fill="url(#paint0_linear_0_146)"/>
+                        <path d="M10.2637 29.9554L20.8504 23.8432C21.3379 23.5617 21.5044 22.9387 21.2232 22.4517L9.97899 28.9435L10.2637 29.9554Z"
+                              fill="url(#paint1_linear_0_146)"/>
                         <defs>
-                            <linearGradient id="paint0_linear_0_146" x1="17.4077" y1="23.5441" x2="18.5453" y2="25.8251" gradientUnits="userSpaceOnUse">
+                            <linearGradient id="paint0_linear_0_146" x1="17.4077" y1="23.5441" x2="18.5453" y2="25.8251"
+                                            gradientUnits="userSpaceOnUse">
                                 <stop stop-color="#747DEF"/>
                                 <stop offset="1" stop-color="#5E3BE1"/>
                             </linearGradient>
-                            <linearGradient id="paint1_linear_0_146" x1="17.9028" y1="24.4017" x2="18.5069" y2="25.5259" gradientUnits="userSpaceOnUse">
+                            <linearGradient id="paint1_linear_0_146" x1="17.9028" y1="24.4017" x2="18.5069" y2="25.5259"
+                                            gradientUnits="userSpaceOnUse">
                                 <stop stop-color="#747DEF"/>
                                 <stop offset="1" stop-color="#5E3BE1"/>
                             </linearGradient>
                         </defs>
                     </svg>
                 </div>
+
                 <div class="subscribe-decor">
                     <svg width="153" height="166" viewBox="0 0 153 166" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.5586 152.61V154.479H0.837891V152.61H11.5586ZM7.19727 148.045V159.432H5.20996V148.045H7.19727Z" fill="#E5E5E5"/>
-                        <path d="M46.5586 117.61V119.479H35.8379V117.61H46.5586ZM42.1973 113.045V124.432H40.21V113.045H42.1973Z" fill="#E5E5E5"/>
-                        <path d="M81.5586 12.6104V14.4795H70.8379V12.6104H81.5586ZM77.1973 8.04492V19.4316H75.21V8.04492H77.1973Z" fill="#E5E5E5"/>
-                        <path d="M81.5586 47.6104V49.4795H70.8379V47.6104H81.5586ZM77.1973 43.0449V54.4316H75.21V43.0449H77.1973Z" fill="#E5E5E5"/>
-                        <path d="M81.5586 82.6104V84.4795H70.8379V82.6104H81.5586ZM77.1973 78.0449V89.4316H75.21V78.0449H77.1973Z" fill="#6246E5"/>
-                        <path d="M81.5586 117.61V119.479H70.8379V117.61H81.5586ZM77.1973 113.045V124.432H75.21V113.045H77.1973Z" fill="#E5E5E5"/>
-                        <path d="M81.5586 152.61V154.479H70.8379V152.61H81.5586ZM77.1973 148.045V159.432H75.21V148.045H77.1973Z" fill="#E5E5E5"/>
-                        <path d="M116.559 12.6104V14.4795H105.838V12.6104H116.559ZM112.197 8.04492V19.4316H110.21V8.04492H112.197Z" fill="#E5E5E5"/>
-                        <path d="M116.559 47.6104V49.4795H105.838V47.6104H116.559ZM112.197 43.0449V54.4316H110.21V43.0449H112.197Z" fill="#E5E5E5"/>
-                        <path d="M116.559 82.6104V84.4795H105.838V82.6104H116.559ZM112.197 78.0449V89.4316H110.21V78.0449H112.197Z" fill="#E5E5E5"/>
-                        <path d="M116.559 117.61V119.479H105.838V117.61H116.559ZM112.197 113.045V124.432H110.21V113.045H112.197Z" fill="#E5E5E5"/>
-                        <path d="M116.559 152.61V154.479H105.838V152.61H116.559ZM112.197 148.045V159.432H110.21V148.045H112.197Z" fill="#E5E5E5"/>
-                        <path d="M151.559 12.6104V14.4795H140.838V12.6104H151.559ZM147.197 8.04492V19.4316H145.21V8.04492H147.197Z" fill="#FF7152"/>
-                        <path d="M151.559 47.6104V49.4795H140.838V47.6104H151.559ZM147.197 43.0449V54.4316H145.21V43.0449H147.197Z" fill="#E5E5E5"/>
-                        <path d="M151.559 82.6104V84.4795H140.838V82.6104H151.559ZM147.197 78.0449V89.4316H145.21V78.0449H147.197Z" fill="#E5E5E5"/>
-                        <path d="M151.559 117.61V119.479H140.838V117.61H151.559ZM147.197 113.045V124.432H145.21V113.045H147.197Z" fill="#E5E5E5"/>
-                        <path d="M151.559 152.61V154.479H140.838V152.61H151.559ZM147.197 148.045V159.432H145.21V148.045H147.197Z" fill="#E5E5E5"/>
+                        <path d="M11.5586 152.61V154.479H0.837891V152.61H11.5586ZM7.19727 148.045V159.432H5.20996V148.045H7.19727Z"
+                              fill="#E5E5E5"/>
+                        <path d="M46.5586 117.61V119.479H35.8379V117.61H46.5586ZM42.1973 113.045V124.432H40.21V113.045H42.1973Z"
+                              fill="#E5E5E5"/>
+                        <path d="M81.5586 12.6104V14.4795H70.8379V12.6104H81.5586ZM77.1973 8.04492V19.4316H75.21V8.04492H77.1973Z"
+                              fill="#E5E5E5"/>
+                        <path d="M81.5586 47.6104V49.4795H70.8379V47.6104H81.5586ZM77.1973 43.0449V54.4316H75.21V43.0449H77.1973Z"
+                              fill="#E5E5E5"/>
+                        <path d="M81.5586 82.6104V84.4795H70.8379V82.6104H81.5586ZM77.1973 78.0449V89.4316H75.21V78.0449H77.1973Z"
+                              fill="#6246E5"/>
+                        <path d="M81.5586 117.61V119.479H70.8379V117.61H81.5586ZM77.1973 113.045V124.432H75.21V113.045H77.1973Z"
+                              fill="#E5E5E5"/>
+                        <path d="M81.5586 152.61V154.479H70.8379V152.61H81.5586ZM77.1973 148.045V159.432H75.21V148.045H77.1973Z"
+                              fill="#E5E5E5"/>
+                        <path d="M116.559 12.6104V14.4795H105.838V12.6104H116.559ZM112.197 8.04492V19.4316H110.21V8.04492H112.197Z"
+                              fill="#E5E5E5"/>
+                        <path d="M116.559 47.6104V49.4795H105.838V47.6104H116.559ZM112.197 43.0449V54.4316H110.21V43.0449H112.197Z"
+                              fill="#E5E5E5"/>
+                        <path d="M116.559 82.6104V84.4795H105.838V82.6104H116.559ZM112.197 78.0449V89.4316H110.21V78.0449H112.197Z"
+                              fill="#E5E5E5"/>
+                        <path d="M116.559 117.61V119.479H105.838V117.61H116.559ZM112.197 113.045V124.432H110.21V113.045H112.197Z"
+                              fill="#E5E5E5"/>
+                        <path d="M116.559 152.61V154.479H105.838V152.61H116.559ZM112.197 148.045V159.432H110.21V148.045H112.197Z"
+                              fill="#E5E5E5"/>
+                        <path d="M151.559 12.6104V14.4795H140.838V12.6104H151.559ZM147.197 8.04492V19.4316H145.21V8.04492H147.197Z"
+                              fill="#FF7152"/>
+                        <path d="M151.559 47.6104V49.4795H140.838V47.6104H151.559ZM147.197 43.0449V54.4316H145.21V43.0449H147.197Z"
+                              fill="#E5E5E5"/>
+                        <path d="M151.559 82.6104V84.4795H140.838V82.6104H151.559ZM147.197 78.0449V89.4316H145.21V78.0449H147.197Z"
+                              fill="#E5E5E5"/>
+                        <path d="M151.559 117.61V119.479H140.838V117.61H151.559ZM147.197 113.045V124.432H145.21V113.045H147.197Z"
+                              fill="#E5E5E5"/>
+                        <path d="M151.559 152.61V154.479H140.838V152.61H151.559ZM147.197 148.045V159.432H145.21V148.045H147.197Z"
+                              fill="#E5E5E5"/>
                     </svg>
 
                 </div>
@@ -621,39 +683,43 @@
                 <h1>
                     Jadoo.
                 </h1>
+
                 <p>
-                    Book your trip in minute, get full
-                    Control for much longer.
+                    <g:message code="footer.subtitle"/>
                 </p>
             </div>
+
             <div class="col-lg-6">
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Company</h4>
+                        <h4><g:message code="footer.company"/></h4>
                         <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Mobile</a></li>
+                            <li><a href="#"><g:message code="footer.about"/></a></li>
+                            <li><a href="#"><g:message code="footer.career"/></a></li>
+                            <li><a href="#"><g:message code="footer.mobile"/></a></li>
                         </ul>
                     </div>
+
                     <div class="footer-column">
-                        <h4>Contact</h4>
+                        <h4><g:message code="footer.contact"/></h4>
                         <ul>
-                            <li><a href="#">Help/FAQ</a></li>
-                            <li><a href="#">Press</a></li>
-                            <li><a href="#">Affilates</a></li>
+                            <li><a href="#"><g:message code="footer.help"/></a></li>
+                            <li><a href="#"><g:message code="footer.press"/></a></li>
+                            <li><a href="#"><g:message code="footer.affilates"/></a></li>
                         </ul>
                     </div>
+
                     <div class="footer-column">
-                        <h4>More</h4>
+                        <h4><g:message code="footer.more"/></h4>
                         <ul>
-                            <li><a href="#">Airlinefess</a></li>
-                            <li><a href="#">Airline</a></li>
-                            <li><a href="#">Low fare tips</a></li>
+                            <li><a href="#"><g:message code="footer.airlinefess"/></a></li>
+                            <li><a href="#"><g:message code="footer.Airline"/></a></li>
+                            <li><a href="#"><g:message code="footer.lowfaretips"/></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-3">
                 <div class="d-flex flex-column align-items-center">
                     <div class="social-icons mb-3">
@@ -670,7 +736,9 @@
                                     params: [fileName: 'twitter.svg'])}" alt="twitter">
                         </a>
                     </div>
-                    <p class="text-center discover">Discover our app</p>
+
+                    <p class="text-center discover"><g:message code="footer.discover"/></p>
+
                     <div class="download centered">
                         <a href="#">
                             <img src="${createLink(controller: 'image', action: 'showImage',
@@ -684,12 +752,14 @@
                 </div>
             </div>
         </div>
+
         <div class="d-flex flex-column align-items-center pt-5">
             <p>All rights reserved@jadoo.co</p>
         </div>
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <asset:javascript src="custom.js"/>
 </body>
 </html>

@@ -629,13 +629,83 @@ body {
     text-align: left;
 }
 
+.testimonial-slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-height: 100%;
+    display: none;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.slide.active {
+    display: flex;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-10%, -50%);
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0 5px 0 13px;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(240, 240, 246, 0);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.control:hover {
+    background-color: #E5E7EB;
+    transform: scale(1.1);
+}
+
+.control:active {
+    background-color: #D1D5DB;
+}
+
+.control.up {
+    margin-bottom: 15px;
+    rotate: -180deg;
+}
+
 .testimonial-card {
     position: relative;
-    background-color: white;
+    background-color: #E6E6E6;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     padding: 24px 36px 24px 36px;
-    max-width: 500px;
+    max-width: 430px;
     text-align: left;
 }
 
@@ -648,7 +718,7 @@ body {
     position: absolute;
     top: -20px; /* Overlapping effect */
     left: 24px;
-    transform: translate(-90%, -10%);
+    transform: translate(-70%, -10%);
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -663,23 +733,27 @@ body {
 }
 
 /* Content Styling */
+.content {
+    padding: 8px;
+}
+
 .content .quote {
     font-size: 16px;
     line-height: 1.5;
-    color: #4A5568; /* Gray text color */
+    color: var(--gray);
     margin-bottom: 16px;
 }
 
 .content .name {
     font-size: 16px;
     font-weight: 600;
-    color: #2D3748; /* Darker gray for the name */
+    color: var(--gray);
     margin-bottom: 4px;
 }
 
 .content .location {
     font-size: 14px;
-    color: #718096; /* Light gray for location */
+    color: #718096;
 }
 
 /* General Styling */
@@ -688,9 +762,9 @@ body {
 }
 
 .logo-row .logo {
-    max-height: 50px; /* Uniform height for logos */
-    object-fit: contain; /* Preserve aspect ratio */
-    padding: 0 20px; /* Horizontal padding for consistent spacing */
+    max-height: 50px;
+    object-fit: contain;
+    padding: 0 20px;
 }
 
 .logo-row .col-auto {
