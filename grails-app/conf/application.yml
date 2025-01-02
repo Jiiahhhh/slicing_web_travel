@@ -12,7 +12,7 @@ dataSource:
 environments:
   development:
     dataSource:
-      dbCreate: create-drop
+      dbCreate: create
       url: jdbc:mysql://localhost:3306/gerak
   test:
     dataSource:
@@ -93,4 +93,7 @@ grails:
     defaultPackage: com.ilal
   profile: web
 server:
-  port: 8081
+  port: 8082
+google:
+  translation:
+    apiKey: "AIzaSyB5IVlKaAGdI3OrXGYvxU6gU_WOU043sK8"
