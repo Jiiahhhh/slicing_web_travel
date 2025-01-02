@@ -39,14 +39,18 @@
                     <li class="dropdown">
                         <button class="wrapper-dropdown" data-bs-toggle="dropdown" aria-expanded="false"
                                 role="button">
-                            ${session.lang ?: 'EN'}
+                            ${session.lang == 'ind' ? 'ID' : 'EN'}
                         </button>
                         <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.849335 0.5L5.42463 5L9.99993 0.5" stroke="#212832"/>
                         </svg>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="${createLink(controller: 'language', action: 'switchLanguage', params: [lang: 'en'])}">EN</a></li>
-                            <li><a class="dropdown-item" href="${createLink(controller: 'language', action: 'switchLanguage', params: [lang: 'ind'])}">ID</a></li>
+                            <li><a class="dropdown-item"
+                                   href="${createLink(controller: 'language', action: 'switchLanguage', params: [lang: 'en'])}">EN</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                   href="${createLink(controller: 'language', action: 'switchLanguage', params: [lang: 'ind'])}">ID</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -64,7 +68,8 @@
                 <div class="left-hero-text">
                     <h4><g:message code="hero.header"/></h4>
 
-                    <h1><g:message code="hero.title1"/> <span class="decor-underline"><g:message code="hero.title2"/></span><g:message code="hero.title3"/></h1>
+                    <h1><g:message code="hero.title1"/> <span class="decor-underline"><g:message
+                            code="hero.title2"/></span><g:message code="hero.title3"/></h1>
 
                     <p><g:message code="hero.subtitle"/></p>
 
@@ -467,7 +472,7 @@
                                     </div>
 
                                     <div class="content">
-                                        <p class="quote">${testimonial.testimonial}</p>
+                                        <p class="quote">"${testimonial.testimonial}"</p>
 
                                         <p class="name">${testimonial.fullName}</p>
 
@@ -771,7 +776,7 @@
 
             const messageParams = {
                 email: document.getElementById("email").value,
-                };
+            };
 
             $.ajax({
                 type: "POST",
