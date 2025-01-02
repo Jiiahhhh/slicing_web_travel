@@ -535,9 +535,9 @@
                 <div class="card-subscribe">
                     <h2><g:message code="subscribe.title"/></h2>
 
-                    <form class="subscribe-form">
+                    <form class="subscribe-form" id="subscribe-form">
                         <div class="input-group">
-                            <input type="email" placeholder="<g:message code='subscribe.email'/>" required/>
+                            <input id="email" type="email" placeholder="<g:message code='subscribe.email'/>" required/>
                             <button type="submit"><g:message code="subscribe.btnSubscribe"/></button>
                         </div>
                     </form>
@@ -758,6 +758,43 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("ANet0ZunPnEbEqxNb");
+    })();
+
+    document
+        .getElementById("subscribe-form")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const messageParams = {
+                email: document.getElementById("email").value,
+                };
+
+            $.ajax({
+                type: "POST",
+                url: "https://api.emailjs.com/api/v1.0/email/send",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    service_id: "service_p1jlxfb",
+                    template_id: "template_bj8vuun",
+                    user_id: "ANet0ZunPnEbEqxNb",
+                    template_params: messageParams,
+                }),
+                success: function (response) {
+                    console.log("SUCCESS!", response.status, response.text);
+                    document.getElementById("subscribe-form").reset();
+                    alert("Your Email has been added");
+                },
+                error: function (error) {
+                    console.log("FAILED...", error);
+                    alert("Message Failed to Send");
+                },
+            });
+        });
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <asset:javascript src="custom.js"/>
